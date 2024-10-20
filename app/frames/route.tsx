@@ -4,13 +4,15 @@ import { frames } from "./frames";
 const handleRequest = frames(async (ctx) => {
   return {
     image: (
-      <div tw="bg-purple-800 text-white w-full h-full justify-center items-center flex text-[48px]">
-        The current time is {new Date().toLocaleString()}
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
+        Open Frames - Frames.js Starter
       </div>
     ),
-    imageOptions: {
-      dynamic: true,
-    },
     textInput: "Type something here",
     buttons: [
       <Button
